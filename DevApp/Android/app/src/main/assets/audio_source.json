@@ -1,1 +1,1 @@
-{"id":"ForcePhoneAudioSource","sampleRate":48000,"chCnt":2,"repeatCnt":4800,"preambleEndOffset":4800,"preambleSyncRepeatCnt":10,"preambleName":"latestPreambleSetting.mat"}
+{"id":"ForcePhoneAudioSource","sampleRate":48000,"chCnt":2,"repeatCnt":48000,"preambleEndOffset":48000,"preambleSyncRepeatCnt":20,"preambleName":"latestPreambleSetting.mat"}

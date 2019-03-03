@@ -2,13 +2,12 @@ apply plugin: 'com.android.application'
 
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 27
 
     defaultConfig {
         applicationId "umich.cse.yctung.wear"
         minSdkVersion 23
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -19,12 +18,13 @@ android {
         }
     }
 }
+configurations.all {exclude group: 'com.android.support', module: 'support-v4'}
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':libacousticsensing')
-    compile 'com.google.android.gms:play-services-wearable:9.2.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':libacousticsensing')
+    implementation 'com.google.android.gms:play-services-wearable:9.2.1'
     //provided 'com.google.android.wearable:wearable:1.0.0'
-    provided 'com.google.android.wearable:wearable:2.0.0'
-    compile 'com.google.android.support:wearable:2.0.0'
+    compileOnly 'com.google.android.wearable:wearable:2.0.0'
+    implementation 'com.google.android.support:wearable:2.0.0'
 }
